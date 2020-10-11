@@ -21,7 +21,7 @@ I used auto regression models with the number of cases in previous days as featu
 
 ### Train Models and Forecast
 
-To generate the result of the prediction, one can run through 107062374_model.ipynb cell by cell.
+To generate the result of the prediction, one can run through model_regression.ipynb cell by cell.
 
 Or you can also run it with the following command.
 

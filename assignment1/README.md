@@ -8,7 +8,7 @@ I used auto regression models with the number of cases in previous days as featu
 
 ### Packages Used
 
-- tqdm
+- tqdm>=4.50
 - pandas
 - statsmodels>=0.12
 - sklearn
@@ -23,15 +23,20 @@ I used auto regression models with the number of cases in previous days as featu
 
 To generate the result of the prediction, one can run through 107062374_model.ipynb cell by cell.
 
+Or you can also run it with the following command.
+
+    cd notebook
+    ipython model_regression.ipynb
+    
 ## Methodoogy
 
 ### Pre-processing
 
-1. Cases with nagaive numbers <br>
+1. Cases with nagaive numbers
     
-Some of the numbers of cases in the csv downloaded from the website are negative, which are not reasonable. Two measures are proposed to fix this problems. One is setting all negative value to 0, and the other is applying absolute function (np.abs()) to negative value
-
-In this project, I applied the second measure to the dataset, since, by observation, the second value seems more likely to the original data.
+    Some of the numbers of cases in the csv downloaded from the website are negative, which are not reasonable. Two measures are proposed to fix this problems. One is setting all negative value to 0, and the other is applying absolute function (np.abs()) to negative value
+    
+    In this project, I applied the second measure to the dataset, since, by observation, the second value seems more likely to the original data.
 
 2. Cropping data
 
@@ -88,6 +93,10 @@ MAPE of Turkey: 18.154%
 ![United_States_of_America](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/United_States_of_America.png)
 
 MAPE of United_States_of_America: 23.280%
+
+## GitHub Repository
+
+> <https://github.com/TYLearChen/NTHU-CS4602/tree/master/assignment1>
 
 ## References
 

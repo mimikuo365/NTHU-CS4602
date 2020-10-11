@@ -51,7 +51,7 @@ Or you can also run it with the following command.
 1. Auto Regression (AutoReg)
 
     The auto regression model is built with a python package statsmodels. The primary tenable parameter is the window size for auto regression.
-In this project, the window size for auto regression is different from model to model; that is, different countries have different window size for auto regression. The range for the window size is [5, 51].
+In this project, the window size for auto regression is different from model to model; that is, different countries have different window size for auto regression. The selection of window sizes is base on the performance on test set.
 
 2. ReLU
 
@@ -61,7 +61,7 @@ In this project, the window size for auto regression is different from model to 
 
     Number of cases should not be fractional. I rounded them to integers before produce the final prediction.
 
-## Performance
+## Result
 
 Below are the plots of ground truth data and prediction in the test data for five countries - Greece, India, Russia, Turkey, United_States_of_America.
 The MAPE is around 20% - 30%, which is mediocre.

@@ -1,4 +1,4 @@
-# Assignemnt 1 - COVID-19 Forecast
+# Assignment 1 - COVID-19 Forecast
 
 ## **Models and Features**
 
@@ -15,7 +15,7 @@ I used auto regression models with the number of cases in previous days as featu
 - numpy
 - scipy
 
-### Install Requriements
+### Install Requirements
 
     pip install -r requirements.txt
 
@@ -28,13 +28,13 @@ Or you can also run it with the following command.
     cd notebook
     ipython model_regression.ipynb
     
-## Methodoogy
+## Methodology
 
 ### Pre-processing
 
-1. Cases with nagaive numbers
+1. Cases with negative numbers
     
-    Some of the numbers of cases in the csv downloaded from the website are negative, which are not reasonable. Two measures are proposed to fix this problems. One is setting all negative value to 0, and the other is applying absolute function (np.abs()) to negative value
+    Some of the numbers of cases in the csv downloaded from the website are negative, which are not reasonable. Two measures are proposed to fix this problem. One is setting all negative value to 0, and the other is applying absolute function (np.abs()) to negative value
     
     In this project, I applied the second measure to the dataset, since, by observation, the second value seems more likely to the original data.
 
@@ -44,13 +44,13 @@ Or you can also run it with the following command.
 
 3. Smoothing
 
-    There are some noise in the raw data. To smooth the curve of number of cases, I applied a Savitzky-Golay filter with window size 51 (days) and polynomial order of 3.
+    There are some noises in the raw data. To smooth the curve of number of cases, I applied a Savitzky-Golay filter with window size 51 (days) and polynomial order of 3.
 
 ### Model
 
 1. Auto Regression (AutoReg)
 
-    The atuo regression model is build with a python package statsmodels. The primary tunable parameter is the window size for auto regression.
+    The auto regression model is built with a python package statsmodels. The primary tenable parameter is the window size for auto regression.
 In this project, the window size for auto regression is different from model to model; that is, different countries have different window size for auto regression. The range for the window size is [5, 51].
 
 2. ReLU

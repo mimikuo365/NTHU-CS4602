@@ -2,7 +2,7 @@
 
 ## **Models and Features**
 
-I used auto regression models with the number of cases in previous days as features.
+I used autoregression models with the number of cases in previous days as features.
 
 ## Getting Started
 
@@ -22,7 +22,6 @@ I used auto regression models with the number of cases in previous days as featu
 ### Train Models and Forecast
 
 To generate the result of the prediction, one can run through model_regression.ipynb cell by cell.
-
 Or you can also run it with the following command.
 
     cd notebook
@@ -40,30 +39,29 @@ Or you can also run it with the following command.
 
 2. Cropping data
 
-    Most of the data in the early phase of the COVID-19 outbreak are not accuracy, due to the low awareness of the disease. Therefore, in this project, I trained the model only with the data later than 1st July 2020.
+    Most of the data in the early phase of the COVID-19 outbreak are not accurate due to the low awareness of the disease. Therefore, in this project, I trained the model only with the data later than 1st July 2020.
 
 3. Smoothing
 
-    There are some noises in the raw data. To smooth the curve of number of cases, I applied a Savitzky-Golay filter with window size 51 (days) and polynomial order of 3.
+    There are some noises in the raw data. To smooth the curve of the number of cases, I applied a Savitzky-Golay filter with window size 51 (days) and polynomial order of 3.
 
 ### Model
 
 1. Auto Regression (AutoReg)
 
-    The auto regression model is built with a python package statsmodels. The primary tenable parameter is the window size for auto regression.
-In this project, the window size for auto regression is different from model to model; that is, different countries have different window size for auto regression. The selection of window sizes is base on the performance on test set.
+    The autoregression model is built with a python package statsmodels. The primary tenable parameter is the window size for autoregression. In this project, the window size for autoregression is different from model to model; that is, different countries have different window size for autoregression. The selection of window sizes is base on the performance on the test set.
 
 2. ReLU
 
-    As mentioned above, the cases should not be negative, but this is not always the case for auto regression. Therefore, I wrote a ReLU (Rectified Linear Unit) function, which would set negative values to zero, and apply it to the output of auto regression prediction.
+    As mentioned above, the cases should not be negative, but this is not always the case for autoregression. Therefore, I wrote a ReLU (Rectified Linear Unit) function, which would set negative values to zero, and apply it to the output of autoregression prediction.
 
 3. Round to Int (rint)
 
-    Number of cases should not be fractional. I rounded them to integers before produce the final prediction.
-
+    The number of cases should not be fractional. I rounded them to integers before producing the final prediction.
+    
 ## Result
 
-Below are the plots of ground truth data and prediction in the test data for five countries - Greece, India, Russia, Turkey, United_States_of_America.
+Below are the plots of ground truth data and prediction in the test data for five countries - Greece, India, Russia, Turkey, United_States_of_America. 
 The MAPE is around 20% - 30%, which is mediocre.
 
 ![Greece](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/Greece.png)

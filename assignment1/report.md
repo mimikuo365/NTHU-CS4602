@@ -58,8 +58,36 @@ In this project, the window size for auto regression is different from model to 
 
 ## Performance
 
-Below are the plots of ground truth data and prediction in the test data for five countries - Russia, Greece, India, United_States_of_America, Turkey.
+Below are the plots of ground truth data and prediction in the test data for five countries - Greece, India, Russia, Turkey, United_States_of_America.
 The MAPE is around 20% - 30%, which is mediocre.
+
+![Greece](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/Greece.png)
+
+MAPE of Greece: 31.059%
+
+---
+
+![India](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/India.png)
+
+MAPE of India: 29.797%
+
+---
+
+![Russia](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/Russia.png)
+
+MAPE of Russia: 23.288%
+
+---
+
+![Turkey](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/Turkey.png)
+
+MAPE of Turkey: 18.154%
+
+---
+
+![United_States_of_America](https://raw.githubusercontent.com/TYLearChen/NTHU-CS4602/master/assignment1/image/United_States_of_America.png)
+
+MAPE of United_States_of_America: 23.280%
 
 ## References
 

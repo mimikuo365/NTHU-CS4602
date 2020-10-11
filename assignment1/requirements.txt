@@ -1,0 +1,6 @@
+tqdm
+pandas
+statsmodels>=0.12
+sklearn
+numpy
+scipy

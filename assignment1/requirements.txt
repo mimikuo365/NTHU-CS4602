@@ -1,4 +1,4 @@
-tqdm
+tqdm>=4.50
 pandas
 statsmodels>=0.12
 sklearn
